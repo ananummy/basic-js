@@ -16,12 +16,10 @@ function getCommonCharacterCount(s1, s2) {
   s2 = s2.split('').sort();
   let count = 0; 
   for (let i = 0; i < s1.length; i++) {
-    for (let j = 0; j < s2.length; j++) {
-      if (s2.includes(s1[i]) && s1.includes(s2[i])) count++; 
-    }
+    if (s2.includes(s1[i]) && s1.includes(s2[i])) count++; 
   }
   return count;
-}
+} 
 
 module.exports = {
   getCommonCharacterCount
